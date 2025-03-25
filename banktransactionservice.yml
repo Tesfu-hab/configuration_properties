@@ -17,7 +17,25 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  boot:
+    admin:
+      client:
+        url: http://localhost:7070  # Admin Server URL
+        instance:
+          hostname: localhost  
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Expose all actuator endpoints (for monitoring)
+  endpoint:
+    health:
+      show-details: always  # Show detailed health info
+  health:
+    defaults:
+      enabled: true
+      
 eureka:
   client:
     register-with-eureka: true
