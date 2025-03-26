@@ -21,8 +21,10 @@ spring:
     admin:
       client:
         url: http://localhost:7070  # Admin Server URL
+        enabled: true
+        auto-registration: true
         instance:
-          hostname: localhost  
+          name: trans-service  
 
 management:
   endpoints:
