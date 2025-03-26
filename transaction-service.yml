@@ -43,7 +43,8 @@ eureka:
     service-url:
       defaultzone: http://localhost:8761/eureka/
   instance:
-     hostname: localhost
+     prefer-ip-address: true  # Forces registration with IP instead of hostname
+     hostname: ${HOSTNAME:localhost}  # Ensures hostname consistency
 
 server:
   port: 8081
