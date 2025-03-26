@@ -1,0 +1,26 @@
+server:
+  port: 7070  # Admin Server runs on port 9090
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Expose all actuator endpoints
+  endpoint:
+    health:
+      show-details: always  # Show detailed health status
+  health:
+    defaults:
+      enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/  # If using Eureka Server
+    register-with-eureka: true
+    fetch-registry: false
+  instance:
+    prefer-ip-address: true
+    use-ipv6: false
+logging:
+  level:
+    de.codecentric: DEBUG  # Enable detailed logging for Spring Boot Admin
+
