@@ -24,7 +24,9 @@ spring:
         enabled: true
         auto-registration: true
         instance:
-          name: trans-service  
+          name: trans-service
+          prefer-ip-address: true  # Forces registration with IP instead of hostname
+          instance-id: ${spring.application.name}:${server.port}
 
 management:
   endpoints:
@@ -46,7 +48,7 @@ eureka:
       defaultzone: http://localhost:8761/eureka/
   instance:
      prefer-ip-address: true  # Forces registration with IP instead of hostname
-     hostname: ${HOSTNAME:localhost}  # Ensures hostname consistency
+     instance-id: ${spring.application.name}:${server.port}
 
 server:
   port: 8081
