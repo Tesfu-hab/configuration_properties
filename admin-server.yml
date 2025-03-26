@@ -18,8 +18,8 @@ eureka:
     register-with-eureka: true
     fetch-registry: false
   instance:
-    prefer-ip-address: true
-    use-ipv6: false
+    hostname: localhost
+
 logging:
   level:
     de.codecentric: DEBUG  # Enable detailed logging for Spring Boot Admin
