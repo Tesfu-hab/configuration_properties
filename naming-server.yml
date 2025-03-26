@@ -1,0 +1,22 @@
+server:
+   port: 8761
+   
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    wait-time-in-ms-when-sync-empty: 0  # Prevents startup delay
+    enable-self-preservation: false  # Optional: Disable self-preservation in development
+  instance:
+    hostname: localhost  # Change if running on another machine
+
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"  # Expose all endpoints
+
+logging:
+   level:
+      root: INFO
