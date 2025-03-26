@@ -21,9 +21,10 @@ spring:
     admin:
       client:
         url: http://localhost:7070  # Admin Server URL
+        enabled: true
+        auto-registration: true
         instance:
-          prefer-ip-address: true  # Forces registration with IP instead of hostname
-          hostname: ${HOSTNAME:localhost}  # Ensures hostname consistency  
+          name: bank-service 
 
 management:
   endpoints:
