@@ -22,7 +22,8 @@ spring:
       client:
         url: http://localhost:7070  # Admin Server URL
         instance:
-          hostname: localhost  
+          prefer-ip-address: true  # Forces registration with IP instead of hostname
+          hostname: ${HOSTNAME:localhost}  # Ensures hostname consistency  
 
 management:
   endpoints:
