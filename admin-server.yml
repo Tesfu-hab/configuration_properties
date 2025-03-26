@@ -9,13 +9,6 @@ management:
   health:
     defaults:
       enabled: true
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: false
-  instance:
-    hostname: localhost
-
 logging:
   level:
     de.codecentric: DEBUG  # Enable detailed logging for Spring Boot Admin
