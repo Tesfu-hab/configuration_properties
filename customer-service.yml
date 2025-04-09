@@ -51,7 +51,5 @@ eureka:
   instance:
      prefer-ip-address: true  # Forces registration with IP instead of hostname
      instance-id: ${spring.application.name}:${server.port}
-     
-server:
-  port: 2021
+
 
