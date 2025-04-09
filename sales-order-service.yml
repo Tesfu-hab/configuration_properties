@@ -22,7 +22,7 @@ spring:
         auto-registration: true
         auto-deregistration: true
         instance:
-          name: order-service
+          name: sales-order-service
 
 eureka:
   client:
