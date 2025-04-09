@@ -1,16 +1,41 @@
 spring:
   application:
-    name: SALES-MGT-SERVICE
+    name: ORDER-MGT-SERVICE
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/finalproject_db # Mysql Dabatase URL
+    url: jdbc:mysql://localhost:3306/finalproject_db
     username: root
     password: root
 
   jpa:
-      database-platform: org.hibernate.dialect.MySQL8Dialect
-      hibernate:
-        ddl-auto: create
-      show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
 
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111
+        enabled: true
+        auto-registration: true
+        instance:
+          name: order-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
  
