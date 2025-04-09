@@ -20,6 +20,7 @@ spring:
         url: http://localhost:1111
         enabled: true
         auto-registration: true
+         auto-deregistration: true
         instance:
           name: order-service
 
