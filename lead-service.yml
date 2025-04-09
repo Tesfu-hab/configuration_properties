@@ -37,4 +37,4 @@ management:
     health:
       show-details: always
 server:
-  port: 3031
+  port: 8082
