@@ -6,51 +6,10 @@ spring:
     url: jdbc:mysql://localhost:3306/finalproject_db
     username: root
     password: root
-
-    hikari:
-      minimum-idle: 5
-      maximum-pool-size: 20
-      idle-timeout: 30000
-      max-lifetime: 1800000
-      connection-timeout: 30000
-
   jpa:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
       ddl-auto: update
     show-sql: true
-  boot:
-    admin:
-      client:
-        url: http://localhost:1111  # Admin Server URL
-        enabled: true
-        auto-registration: true
-        instance:
-          name: customer-service
-          prefer-ip-address: true  # Forces registration with IP instead of hostname
-          instance-id: ${spring.application.name}:${server.port}
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"  # Expose all actuator endpoints (for monitoring)
-  endpoint:
-    health:
-      show-details: always  # Show detailed health info
-  health:
-    defaults:
-      enabled: true
-      
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultzone: http://localhost:8761/eureka/
-  instance:
-     prefer-ip-address: true  # Forces registration with IP instead of hostname
-     instance-id: ${spring.application.name}:${server.port}
-
 server:
   port: 2021
