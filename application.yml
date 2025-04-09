@@ -27,4 +27,9 @@ management:
       show-details: always
 
 # You can also define logging level, circuit breaker settings, etc.
-
+#logging:
+#  level:
+#    root: DEBUG
+#    com.batch14: DEBUG
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
