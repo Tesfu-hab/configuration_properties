@@ -12,7 +12,9 @@
 # logging:
 #   level:
 #     de.codecentric: DEBUG  # Enable detailed logging for Spring Boot Admin
-
+spring:
+  application:
+    name: ADMIN-SERVER
 eureka:
   client:
    service-url:
