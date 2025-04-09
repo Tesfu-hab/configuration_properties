@@ -1,15 +1,24 @@
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"  # Expose all actuator endpoints
-  endpoint:
-    health:
-      show-details: always  # Show detailed health status
-  health:
-    defaults:
-      enabled: true
-logging:
-  level:
-    de.codecentric: DEBUG  # Enable detailed logging for Spring Boot Admin
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: "*"  # Expose all actuator endpoints
+#   endpoint:
+#     health:
+#       show-details: always  # Show detailed health status
+#   health:
+#     defaults:
+#       enabled: true
+# logging:
+#   level:
+#     de.codecentric: DEBUG  # Enable detailed logging for Spring Boot Admin
 
+eureka:
+  client:
+   service-url:
+    defaultZone: http://localhost:8761/eureka/
+   register-with-eureka: true
+   fetch-registry: false
+
+server:
+   port: 1111 
