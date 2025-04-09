@@ -11,13 +11,3 @@ spring:
       ddl-auto: update
     show-sql: true
 
-management:
-  endpoints:
-   web:
-    exposure:
-     include: "*" # or include: [ "health", "info", "metrics" ]
-  endpoint:
-   health:
-    show-details: always
-server:
-  port: 2021
