@@ -5,10 +5,6 @@ spring:
         url: http://localhost:1111  # Spring Boot Admin Server URL
         enabled: true
         auto-registration: true
-        instance:
-          metadata:
-            user.name: admin
-            user.password: admin
 
 eureka:
   client:
