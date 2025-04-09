@@ -2,7 +2,7 @@ spring:
   application:
     name: LEAD-MGT-SERVICE
   datasource:
-    url: jdbc:postgresql://localhost:5432/customer_db # Postgres Dabatase URL
+    url: jdbc:postgresql://localhost:5432/finalproject_db # Postgres Dabatase URL
     username: postgres
     password: root
     driver-class-name: org.postgresql.Driver
