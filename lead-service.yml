@@ -11,13 +11,29 @@ spring:
       ddl-auto: create
     show-sql: true
 
-# management:
-#   endpoints:
-#    web:
-#     exposure:
-#      include: "*" # or include: [ "health", "info", "metrics" ]
-#   endpoint:
-#    health:
-#     show-details: always
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111
+        enabled: true
+        auto-registration: true
+        instance:
+          name: lead-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 server:
   port: 3031
