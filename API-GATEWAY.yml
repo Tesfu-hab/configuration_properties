@@ -1,25 +1,6 @@
 spring:
   application:
     name: API-GATEWAY
-
-  cloud:
-    gateway:
-      routes:
-        - id: customer-service
-          uri: lb://CUSTOMER-MGT-SERVICE
-          predicates:
-            - Path=/customers/**
-
-        - id: lead-service
-          uri: lb://LEAD-MGT-SERVICE
-          predicates:
-            - Path=/leads/**
-
-        - id: order-service
-          uri: lb://ORDER-MGT-SERVICE
-          predicates:
-            - Path=/orders/**
-
   boot:
     admin:
       client:
@@ -29,7 +10,6 @@ spring:
         auto-deregistration: true
         instance:
           name: api-gateway
-
 eureka:
   client:
     service-url:
